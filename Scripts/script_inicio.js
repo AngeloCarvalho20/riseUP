@@ -1,9 +1,4 @@
 
-function redirecionar() {
-    window.location.assign()
-}
-
-
 /*descer inoformações dos serviços */
 document.querySelectorAll('[palmeiras]').forEach(folder => {
 
@@ -176,7 +171,7 @@ function Caeté() {
 btnC.onclick = Caeté;
 
 /**Email enviado */
-function enviado(){
+function enviado() {
     alert("E-mail enviado com sucesso");
 }
 
@@ -192,26 +187,25 @@ function closeFormRegistrar() {
 
 /*popup cadastrar */
 function openFormCadastrar() {
-    document.getElementById("popupContainer").style.display = "none";
-    document.getElementById("popupCadastrar").style.display = "block";
+    document.getElementById("popupRegistrar").style.display = "none";
+    var modalRegistrar = document.getElementById("popupCadastrar");
+    modalRegistrar.style.display = "block";
 }
 function closeFormCadastrar() {
-    document.getElementById("popupCadastrar").style.display = "none";
+    document.getElementById("popupRegistrar").style.display = "none";
 }
 
 
 /*popup login simples */
-function openForm() {
-    document.getElementById("myForm").style.display = "block";
+function openFormSimples() {
+    document.getElementById("myFormSimples").style.display = "block";
 }
-function closeForm() {
-    document.getElementById("myForm").style.display = "none";
+function closeFormSimples() {
+    document.getElementById("myFormSimples").style.display = "none";
 }
-closeForm();
+closeFormSimples();
 
-function redirecionar(){
-    window.location.href = "file:///C:/Users/gomes/OneDrive/%C3%81rea%20de%20Trabalho/RiseUp/index_usu%C3%A1rio.html";
-}
+
 
 
 

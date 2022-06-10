@@ -21,13 +21,13 @@
 
     <!--cabeçalho-->
     <header>
-        <button id="btnLogin" onclick="openForm()"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+        <button id="btnLogin" onclick="openFormSimples()"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
                 fill="currentColor" class="bi bi-person-circle" id="login" viewBox="0 0 16 16">
                 <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
                 <path fill-rule="evenodd"
                     d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
             </svg></button>
-        <a id="localização" class="scrolllocal" >LOCALIZAÇÃO</a>
+        <a id="localização" class="scrolllocal">LOCALIZAÇÃO</a>
         <a id="inicio" class="scrollToTop" href="index_adm.html">INÍCIO</a>
     </header>
 
@@ -55,6 +55,7 @@
 
         </div>
     </nav>
+
 
 
     <!--Corpo da página - serviços-->
@@ -1394,19 +1395,21 @@
 
 
     <!--popup login simples-->
-    <div class="form-popup" id="myForm">
+    <div class="form-popup" id="myFormSimples">
         <form action="/action_page.php" class="form-container">
-            <button type="button" class="btn cancel" onclick="closeForm()"><svg xmlns="http://www.w3.org/2000/svg"
+            <button type="button" class="btn cancel" onclick="closeFormSimples()">
+                <svg xmlns="http://www.w3.org/2000/svg"
                     width="20" height="20" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
                     <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
                     <path
                         d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
-                </svg></button>
+                </svg>
+            </button>
 
             <div id="txtLogin">LOGIN</div>
             <input type="text" placeholder="CPF" name="CPF" required>
             <input type="password" placeholder="SENHA" name="psw" required>
-            <button id="btnEntrar" class="btn" onclick="">ENTRAR</button>
+            <button id="btnEntrar" class="btn"><a href="index_adm.html" style="color: white; text-decoration:none;">ENTRAR</a></button>
         </form>
     </div>
 
@@ -1415,32 +1418,32 @@
     <div class="popupRegistrar" id="popupRegistrar">
         <div class="popupContainer">
             <form class="formRegistrar" method="get" action="">
-                <div class="formRegistrarTitle">
 
-                    <button id="closeModalRegistrar" onclick="closeFormRegistrar()"><svg
-                            xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                            style="color: white;" class="bi bi-x-circle" viewBox="0 0 16 16">
-                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                            <path
-                                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
-                        </svg></button>
-                </div>
+
+                <button id="closeModalRegistrar" onclick="closeFormRegistrar()"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="20" height="20" fill="currentColor" style="color: white;" class="bi bi-x-circle"
+                        viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                        <path
+                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                </button>
+
                 <strong>
                     <h2>LOGIN</h2>
                 </strong>
                 <h3>Caso ja tenha cadastro, faça seu login para realizar o agendamento a partir do seu perfil</h3>
 
                 <div id="inputRegistrar">
-                    <input id="cpf" type="number" placeholder="CPF">
-                    <input id="senha" type="password" placeholder="SENHA">
+                    <input id="cpf" type="text" placeholder="CPF" required>
+                    <input id="senha" type="password" placeholder="SENHA" required>
 
                 </div>
 
                 <div id="btnRegistrar">
-                    <button href="index_usuário.html"><a href="index_usuário.html">ENTRAR</a></button>
+                    <button> <a href="index_usuário.html"> ENTRAR </button></a>
                     <button onclick="openFormCadastrar()">CADASTRAR</button>
                 </div>
-
 
             </form>
 
@@ -1451,26 +1454,44 @@
 
     <!--popup cadastro do usuário-->
     <div class="popupCadastrar" id="popupCadastrar">
-        <div class="popupContainerCadastrar">
+        <div class="popupContainer">
             <form class="formCadastrar" method="get" action="">
-                <div class="formCadastrarTitle">
 
-                    <button id="closeModalCadastrar" onclick="closeFormCadastrar()">X</button>
+                <div class="formCadastrarTitle">
+                    <button id="closeModalCadastrar" onclick="closeFormCadastrar()">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                        width="20" height="20" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                        <path
+                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                        </svg>
+                    </button>
                 </div>
+
                 <strong>
-                    <h2>LOGIN</h2>
+                    <h2 class="popup-title">CADASTRO</h2>
                 </strong>
-                <h3>Caso ja tenha cadastro, faça seu login para realizar o agendamento a partir do seu perfil</h3>
+                <h3>Realize seu cadastro para prosseguir com o agendamento</h3>
 
                 <div id="inputCadastrar">
-                    <input id="cpfCad" type="text" placeholder="CPF">
-                    <input id="senhaCad" type="text" placeholder="SENHA">
+                    <input id="nomeCompletoCad" class="inputCad" type="text" placeholder="Nome completo">
+                    
+                    <div class="inputContainerExtra">
+                        <input id="emailCad" class="inputCad" type="email" placeholder="Email">
+                        <input id="cpfCad" class="inputCad" type="text" placeholder="CPF">
+                    </div>
+
+                    <input id="telefoneCad" class="inputCad" type="tel" placeholder="Telefone">
+                    
+                    <div class="inputContainerExtra">
+                        <input id="senhaCad" class="inputCad" type="password" placeholder="Senha">
+                        <input id="senhaConfirmCad" class="inputCad" type="password" placeholder="Confirmar senha">
+                    </div>
 
                 </div>
 
-                <div id="btnCadastrar">
-                    <button href="index_usuário.html"><a href="index_usuário.html">Entrar</a></button>
-                    <button>Cadastrar</button>
+                <div id="btnRegistrar" class="btn">
+                    <button> <a href="index_usuário.html">Cadastrar</a> </button>
 
                 </div>
 
